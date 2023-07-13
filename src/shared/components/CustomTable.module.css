@@ -1,0 +1,214 @@
+/* styles for the CustomTable component. */
+
+.container {
+  font-family: Arial, sans-serif;
+  margin: auto;
+  width: 65%;
+}
+
+
+.rightInput {
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid lightgray;
+  text-align: right;
+  box-sizing: border-box;
+}
+
+.rightInput::placeholder {
+  font-weight: bold;
+  opacity: 0.5;
+  color: rgb(1, 1, 110);
+}
+
+.leftInput {
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid lightgray;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.leftInput::placeholder {
+  font-weight: bold;
+  opacity: 0.5;
+  color: rgb(1, 1, 110);
+}
+
+.notFoundMessage {
+  text-align: center;
+  padding: 10px;
+  font-weight: 500;
+  color: #ad0000;
+}
+
+.tableContainer {
+  overflow-x: auto;
+  border-radius: 4px;
+  border: 1px solid #c5efff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.tableHeader {
+  background-color: #a0caf4ea;
+  color: #000000;
+  cursor: pointer;
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.tableHeaderContent {
+  display: flex;
+  align-items: center;
+}
+
+.sortIndicator {
+  margin-left: 5px;
+}
+
+.oddRow {
+  background-color: #d0e9face;
+  color: #000000;
+}
+
+.evenRow {
+  background-color: #b2dfff3e;
+  color: #000000;
+}
+
+.rightTableCell {
+  padding: 10px;
+  text-align: right;
+  font-size: 14px;
+}
+
+.leftTableCell {
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.paginationButtonsContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.paginationButton {
+  background-color: #fff;
+  color: #4099ff;
+  border: none;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.activeButton {
+  color: #00399c;
+}
+
+/* Responsive styles for landscape tablet */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .container {
+    width: 85%;
+  }
+}
+
+/* Additional styles for mobile view */
+@media screen and (max-width: 767px) {
+
+  
+
+  .container {
+    width: 90%;
+  }
+  
+  .tableContainer {
+    overflow-x: hidden;
+  }
+
+  .table {
+    display: none;
+  }
+
+  .cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #c3e0fdc1;
+  }
+
+  .card {
+    margin: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px 1px rgba(0, 51, 153, 0.75);
+    -webkit-box-shadow: 0px 0px 4px 1px rgba(0, 51, 153, 0.75);
+    -moz-box-shadow: 0px 0px 4px 1px rgba(0, 51, 153, 0.75);
+    width: 90%;
+    background-color: #f5f9ff;
+  }
+
+  .cardRow {
+    display: flex;
+    margin-bottom: 5px;
+  }
+
+  .cardLabel {
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+
+  .cardValue {
+    margin-left: 5px;
+  }
+
+  .sortContainer {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .sortButton {
+    background-color: #fff;
+    color: #00399c;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .cardContainer {
+    display: none;
+  }
+}
